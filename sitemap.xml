@@ -1,11 +1,11 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
-<url><loc>https://ggsegverse.github.io/ggsegNeuromorphometrics/404.html</loc></url>
-<url><loc>https://ggsegverse.github.io/ggsegNeuromorphometrics/authors.html</loc></url>
-<url><loc>https://ggsegverse.github.io/ggsegNeuromorphometrics/index.html</loc></url>
-<url><loc>https://ggsegverse.github.io/ggsegNeuromorphometrics/news/index.html</loc></url>
-<url><loc>https://ggsegverse.github.io/ggsegNeuromorphometrics/reference/ggsegNeuromorphometrics-package.html</loc></url>
-<url><loc>https://ggsegverse.github.io/ggsegNeuromorphometrics/reference/index.html</loc></url>
-<url><loc>https://ggsegverse.github.io/ggsegNeuromorphometrics/reference/neuromorphometrics_cortical.html</loc></url>
-<url><loc>https://ggsegverse.github.io/ggsegNeuromorphometrics/reference/neuromorphometrics_subcortical.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegMiccai/404.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegMiccai/authors.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegMiccai/index.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegMiccai/news/index.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegMiccai/reference/ggsegMiccai-package.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegMiccai/reference/index.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegMiccai/reference/miccai_cortical.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegMiccai/reference/miccai_subcortical.html</loc></url>
 </urlset>
 

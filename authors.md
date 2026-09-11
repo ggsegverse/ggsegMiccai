@@ -8,16 +8,16 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/ggsegverse/ggsegNeuromorphometrics/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/ggsegverse/ggsegMiccai/blob/main/DESCRIPTION)
 
-Mowinckel A (2026). *ggsegNeuromorphometrics: Neuromorphometrics Brain
+Mowinckel A (2026). *ggsegMiccai: MICCAI 2012 Multi-Atlas Labeling Brain
 Atlas for the 'ggseg' Ecosystem*. R package version 1.0.0,
-<https://github.com/ggsegverse/ggsegNeuromorphometrics>.
+<https://github.com/ggsegverse/ggsegMiccai>.
 
     @Manual{,
-      title = {ggsegNeuromorphometrics: Neuromorphometrics Brain Atlas for the 'ggseg' Ecosystem},
+      title = {ggsegMiccai: MICCAI 2012 Multi-Atlas Labeling Brain Atlas for the 'ggseg' Ecosystem},
       author = {Athanasia Mo Mowinckel},
       year = {2026},
       note = {R package version 1.0.0},
-      url = {https://github.com/ggsegverse/ggsegNeuromorphometrics},
+      url = {https://github.com/ggsegverse/ggsegMiccai},
     }
