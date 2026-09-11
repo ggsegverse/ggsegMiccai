@@ -2,4 +2,4 @@
 
 export(neuromorphometrics_cortical)
 export(neuromorphometrics_subcortical)
-import(ggseg.formats)
+importFrom(ggseg.formats,is_ggseg_atlas)

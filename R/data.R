@@ -20,7 +20,6 @@
 #'   older adults. *Journal of Cognitive Neuroscience*, 19(9):1498-1507.
 #'   \doi{10.1162/jocn.2007.19.9.1498}
 #' @return A [ggseg.formats::ggseg_atlas] object (cortical).
-#' @import ggseg.formats
 #' @export
 #' @examples
 #' neuromorphometrics_cortical()
