@@ -11,9 +11,9 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-MICCAI 2012 Multi-Atlas Labeling brain atlas for the ggseg ecosystem: the maximum
-probability tissue labels distributed with SPM12, split into a cortical
-atlas (`miccai_cortical()`) and a subcortical atlas
+MICCAI 2012 Multi-Atlas Labeling brain atlas for the ggseg ecosystem:
+the maximum probability tissue labels distributed with SPM12, split into
+a cortical atlas (`miccai_cortical()`) and a subcortical atlas
 (`miccai_subcortical()`).
 
 ## Data licence
@@ -68,20 +68,22 @@ pak::pak("ggsegverse/ggsegMiccai")
 ## Usage
 
 ``` r
-library(ggseg)
 library(ggsegMiccai)
 
-plot(miccai_cortical()) +
-  theme(
-    legend.position = "bottom",
-    legend.text = element_text(size = 7)
-  ) +
-  guides(fill = guide_legend(ncol = 4))
+plot(miccai_cortical())
 ```
+
+<img src="man/figures/README-cortical-1.png" style="width:100.0%" />
+
+``` r
+plot(miccai_subcortical())
+```
+
+<img src="man/figures/README-subcortical-1.png" style="width:100.0%" />
 
 ## Code of Conduct
 
-Please note that the ggsegMiccai project is released with a
-[Contributor Code of
+Please note that the ggsegMiccai project is released with a [Contributor
+Code of
 Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.

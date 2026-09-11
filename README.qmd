@@ -83,17 +83,16 @@ pak::pak("ggsegverse/ggsegMiccai")
 ## Usage
 
 ```{r}
-#| label: plot-2d
-#| eval: false
-library(ggseg)
+#| label: cortical
 library(ggsegMiccai)
 
-plot(miccai_cortical()) +
-  theme(
-    legend.position = "bottom",
-    legend.text = element_text(size = 7)
-  ) +
-  guides(fill = guide_legend(ncol = 4))
+plot(miccai_cortical())
+```
+
+```{r}
+#| label: subcortical
+#| fig-height: 4
+plot(miccai_subcortical())
 ```
 
 ## Code of Conduct
