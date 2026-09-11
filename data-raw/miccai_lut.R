@@ -34,19 +34,23 @@ miccai_lut <- function(xml_file) {
   labels <- labels[!labels$label %in% non_grey_labels, ]
 
   region <- sub("^(Left|Right) ", "", labels$label)
-  unique_regions <- unique(region)
-  palette <- grDevices::col2rgb(
-    grDevices::hcl.colors(length(unique_regions), "Dynamic")
-  )
-  colour_index <- match(region, unique_regions)
+  type <- ifelse(labels$idx >= 100L, "cortical", "subcortical")
+  colours <- character(nrow(labels))
+  for (atlas_type in unique(type)) {
+    in_type <- type == atlas_type
+    type_regions <- unique(region[in_type])
+    palette <- grDevices::hcl.colors(length(type_regions), "Dynamic")
+    colours[in_type] <- palette[match(region[in_type], type_regions)]
+  }
+  rgb <- grDevices::col2rgb(colours)
 
   data.frame(
     idx = labels$idx,
     label = labels$label,
-    R = palette["red", colour_index],
-    G = palette["green", colour_index],
-    B = palette["blue", colour_index],
+    R = rgb["red", ],
+    G = rgb["green", ],
+    B = rgb["blue", ],
     A = 0L,
-    type = ifelse(labels$idx >= 100L, "cortical", "subcortical")
+    type = type
   )
 }
