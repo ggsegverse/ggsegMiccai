@@ -140,7 +140,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "799.787KB",
+  "fileSize": "1499.654KB",
   "releaseNotes": "https://github.com/ggsegverse/ggsegMiccai/blob/main/NEWS.md",
   "readme": "https://github.com/ggsegverse/ggsegMiccai/blob/main/README.md",
   "contIntegration": "https://github.com/ggsegverse/ggsegMiccai/actions/workflows/R-CMD-check.yaml",
