@@ -1,4 +1,4 @@
-# Create Neuromorphometrics Brain Atlas
+# Create MICCAI Brain Atlas
 #
 # Source: SPM12 tpm/labels_Neuromorphometrics.nii and .xml
 #   https://github.com/spm/spm12/tree/main/tpm
@@ -17,7 +17,7 @@ library(ggseg.formats)
 
 Sys.setenv(FREESURFER_HOME = "/Applications/freesurfer/7.4.1")
 
-source(here::here("data-raw", "neuromorphometrics_lut.R"))
+source(here::here("data-raw", "miccai_lut.R"))
 
 source_dir <- here::here("data-raw", "source")
 dir.create(source_dir, showWarnings = FALSE, recursive = TRUE)
@@ -38,7 +38,7 @@ for (source_file in c(
   }
 }
 
-lut <- neuromorphometrics_lut(
+lut <- miccai_lut(
   file.path(source_dir, "labels_Neuromorphometrics.xml")
 )
 
@@ -49,7 +49,7 @@ atlases <- create_wholebrain_from_volume(
     "labels_Neuromorphometrics.nii"
   ),
   input_lut = lut,
-  atlas_name = "neuromorphometrics",
+  atlas_name = "miccai",
   output_dir = "data-raw",
   skip_existing = TRUE,
   cleanup = FALSE
@@ -61,11 +61,11 @@ vermis_regions <- c(
   "cerebellar vermal lobules viii x" = "cerebellar vermal lobules VIII-X"
 )
 
-.neuromorphometrics_cortical <- atlases$cortical |>
+.miccai_cortical <- atlases$cortical |>
   atlas_simplify(keep = 0.2) |>
   atlas_region_rename("^\\S+ ", "")
 
-.neuromorphometrics_subcortical <- atlases$subcortical |>
+.miccai_subcortical <- atlases$subcortical |>
   atlas_region_rename(
     "^cerebellar vermal lobules",
     function(region) unname(vermis_regions[region])
@@ -73,8 +73,8 @@ vermis_regions <- c(
   atlas_region_rename("^ventral dc$", "ventral DC")
 
 usethis::use_data(
-  .neuromorphometrics_cortical,
-  .neuromorphometrics_subcortical,
+  .miccai_cortical,
+  .miccai_subcortical,
   overwrite = TRUE,
   compress = "xz",
   internal = TRUE

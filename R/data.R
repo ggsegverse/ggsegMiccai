@@ -1,4 +1,4 @@
-#' Neuromorphometrics Cortical Atlas
+#' MICCAI Cortical Atlas
 #'
 #' Cortical regions from the Neuromorphometrics maximum probability tissue
 #' labels distributed with SPM12, derived from the MICCAI 2012 Grand Challenge
@@ -22,11 +22,11 @@
 #' @return A [ggseg.formats::ggseg_atlas] object (cortical).
 #' @export
 #' @examples
-#' neuromorphometrics_cortical()
+#' miccai_cortical()
 # nolint next: object_usage_linter.
-neuromorphometrics_cortical <- function() .neuromorphometrics_cortical
+miccai_cortical <- function() .miccai_cortical
 
-#' Neuromorphometrics Subcortical Atlas
+#' MICCAI Subcortical Atlas
 #'
 #' Subcortical regions from the Neuromorphometrics maximum probability tissue
 #' labels distributed with SPM12, derived from the MICCAI 2012 Grand Challenge
@@ -40,10 +40,10 @@ neuromorphometrics_cortical <- function() .neuromorphometrics_cortical
 #' @family ggseg_atlases
 #' @family subcortical_atlases
 #'
-#' @inherit neuromorphometrics_cortical references
+#' @inherit miccai_cortical references
 #' @return A [ggseg.formats::ggseg_atlas] object (subcortical).
 #' @export
 #' @examples
-#' neuromorphometrics_subcortical()
+#' miccai_subcortical()
 # nolint next: object_usage_linter.
-neuromorphometrics_subcortical <- function() .neuromorphometrics_subcortical
+miccai_subcortical <- function() .miccai_subcortical

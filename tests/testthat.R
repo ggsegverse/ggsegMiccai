@@ -1,4 +1,4 @@
 library(testthat)
-library(ggsegNeuromorphometrics)
+library(ggsegMiccai)
 
-test_check("ggsegNeuromorphometrics")
+test_check("ggsegMiccai")

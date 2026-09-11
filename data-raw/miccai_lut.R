@@ -15,7 +15,7 @@ non_grey_labels <- c(
   "Optic Chiasm"
 )
 
-read_neuromorphometrics_labels <- function(xml_file) {
+read_miccai_labels <- function(xml_file) {
   xml <- readLines(xml_file, warn = FALSE, encoding = "latin1")
   matches <- regmatches(
     xml,
@@ -29,8 +29,8 @@ read_neuromorphometrics_labels <- function(xml_file) {
   )
 }
 
-neuromorphometrics_lut <- function(xml_file) {
-  labels <- read_neuromorphometrics_labels(xml_file)
+miccai_lut <- function(xml_file) {
+  labels <- read_miccai_labels(xml_file)
   labels <- labels[!labels$label %in% non_grey_labels, ]
 
   region <- sub("^(Left|Right) ", "", labels$label)

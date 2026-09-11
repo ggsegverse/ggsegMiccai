@@ -27,4 +27,4 @@ data-raw/**/*.ply
 data-raw/**/*.asc
 !data-raw/source/*.xml
 Rplots.pdf
-data-raw/neuromorphometrics/
+data-raw/miccai/

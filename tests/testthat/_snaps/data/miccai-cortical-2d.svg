@@ -412,6 +412,6 @@
 <path d='M 446.33 232.72 L 448.85 233.07 L 450.06 234.50 L 447.43 235.03 L 444.93 233.82 L 445.14 232.11 L 446.33 232.72 Z' style='fill-rule: evenodd; fill: #40BBC5; stroke-width: 0.43; stroke: #595959; stroke-linecap: butt;' />
 <path d='M 430.43 231.27 L 431.97 229.96 L 434.55 231.03 L 434.21 232.80 L 431.40 233.56 L 428.72 232.63 L 429.30 230.76 L 430.43 231.27 Z' style='fill-rule: evenodd; fill: #40BBC5; stroke-width: 0.43; stroke: #595959; stroke-linecap: butt;' />
 <path d='M 505.19 237.91 L 504.38 237.16 L 505.13 236.11 L 505.88 236.88 L 505.19 237.91 Z' style='fill-rule: evenodd; fill: #64BC8C; stroke-width: 0.43; stroke: #595959; stroke-linecap: butt;' />
-<text x='0.00' y='176.94' style='font-size: 13.20px; font-family: sans;' textLength='186.37px' lengthAdjust='spacingAndGlyphs'>neuromorphometrics-cortical-2d</text>
+<text x='0.00' y='176.94' style='font-size: 13.20px; font-family: sans;' textLength='102.71px' lengthAdjust='spacingAndGlyphs'>miccai-cortical-2d</text>
 </g>
 </svg>
