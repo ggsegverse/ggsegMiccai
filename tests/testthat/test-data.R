@@ -1,32 +1,32 @@
-describe("neuromorphometrics_cortical", {
+describe("miccai_cortical", {
   it("is a valid cortical ggseg_atlas", {
-    expect_s3_class(neuromorphometrics_cortical(), "ggseg_atlas")
-    expect_s3_class(neuromorphometrics_cortical(), "cortical_atlas")
-    expect_true(ggseg.formats::is_ggseg_atlas(neuromorphometrics_cortical()))
+    expect_s3_class(miccai_cortical(), "ggseg_atlas")
+    expect_s3_class(miccai_cortical(), "cortical_atlas")
+    expect_true(ggseg.formats::is_ggseg_atlas(miccai_cortical()))
   })
 
   it("renders with ggseg", {
     skip_if_not_installed("ggseg")
     skip_if_not_installed("vdiffr")
     vdiffr::expect_doppelganger(
-      "neuromorphometrics-cortical-2d",
-      ggseg::brain_test_plot(neuromorphometrics_cortical())
+      "miccai-cortical-2d",
+      ggseg::brain_test_plot(miccai_cortical())
     )
   })
 
   it("renders with ggseg3d", {
     skip_if_not_installed("ggseg3d")
     skip_if_not_installed("ggseg.meshes")
-    p <- ggseg3d::ggseg3d(atlas = neuromorphometrics_cortical())
+    p <- ggseg3d::ggseg3d(atlas = miccai_cortical())
     expect_s3_class(p, c("plotly", "htmlwidget"))
   })
 })
 
-describe("neuromorphometrics_subcortical", {
+describe("miccai_subcortical", {
   it("is a valid ggseg_atlas", {
-    expect_s3_class(neuromorphometrics_subcortical(), "ggseg_atlas")
+    expect_s3_class(miccai_subcortical(), "ggseg_atlas")
     expect_true(
-      ggseg.formats::is_ggseg_atlas(neuromorphometrics_subcortical())
+      ggseg.formats::is_ggseg_atlas(miccai_subcortical())
     )
   })
 
@@ -34,8 +34,8 @@ describe("neuromorphometrics_subcortical", {
     skip_if_not_installed("ggseg")
     skip_if_not_installed("vdiffr")
     vdiffr::expect_doppelganger(
-      "neuromorphometrics-subcortical-2d",
-      ggseg::brain_test_plot(neuromorphometrics_subcortical())
+      "miccai-subcortical-2d",
+      ggseg::brain_test_plot(miccai_subcortical())
     )
   })
 })

@@ -1,5 +1,5 @@
-Package: ggsegNeuromorphometrics
-Title: Neuromorphometrics Brain Atlas for the 'ggseg' Ecosystem
+Package: ggsegMiccai
+Title: MICCAI 2012 Multi-Atlas Labeling Brain Atlas for the 'ggseg' Ecosystem
 Version: 1.0.0
 Authors@R: c(
     person("Athanasia Mo", "Mowinckel", , "a.m.mowinckel@psykologi.uio.no", role = c("aut", "cre"),
@@ -29,8 +29,8 @@ Suggests:
     vdiffr
 Remotes:
     ggsegverse/ggseg
-URL: https://github.com/ggsegverse/ggsegNeuromorphometrics
-BugReports: https://github.com/ggsegverse/ggsegNeuromorphometrics/issues
+URL: https://github.com/ggsegverse/ggsegMiccai
+BugReports: https://github.com/ggsegverse/ggsegMiccai/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Config/testthat/edition: 3

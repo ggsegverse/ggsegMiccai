@@ -15,7 +15,7 @@ non_grey_labels <- c(
   "Optic Chiasm"
 )
 
-read_neuromorphometrics_labels <- function(xml_file) {
+read_miccai_labels <- function(xml_file) {
   xml <- readLines(xml_file, warn = FALSE, encoding = "latin1")
   matches <- regmatches(
     xml,
@@ -29,24 +29,28 @@ read_neuromorphometrics_labels <- function(xml_file) {
   )
 }
 
-neuromorphometrics_lut <- function(xml_file) {
-  labels <- read_neuromorphometrics_labels(xml_file)
+miccai_lut <- function(xml_file) {
+  labels <- read_miccai_labels(xml_file)
   labels <- labels[!labels$label %in% non_grey_labels, ]
 
   region <- sub("^(Left|Right) ", "", labels$label)
-  unique_regions <- unique(region)
-  palette <- grDevices::col2rgb(
-    grDevices::hcl.colors(length(unique_regions), "Dynamic")
-  )
-  colour_index <- match(region, unique_regions)
+  type <- ifelse(labels$idx >= 100L, "cortical", "subcortical")
+  colours <- character(nrow(labels))
+  for (atlas_type in unique(type)) {
+    in_type <- type == atlas_type
+    type_regions <- unique(region[in_type])
+    palette <- grDevices::hcl.colors(length(type_regions), "Dynamic")
+    colours[in_type] <- palette[match(region[in_type], type_regions)]
+  }
+  rgb <- grDevices::col2rgb(colours)
 
   data.frame(
     idx = labels$idx,
     label = labels$label,
-    R = palette["red", colour_index],
-    G = palette["green", colour_index],
-    B = palette["blue", colour_index],
+    R = rgb["red", ],
+    G = rgb["green", ],
+    B = rgb["blue", ],
     A = 0L,
-    type = ifelse(labels$idx >= 100L, "cortical", "subcortical")
+    type = type
   )
 }
