@@ -64,5 +64,5 @@ miccai_cortical()
 #> 8  left          entorhinal area           lh_Left_Ent_entorhinal_area
 #> 9  left        frontal operculum          lh_Left_FO_frontal_operculum
 #> 10 left             frontal pole              lh_Left_FRP_frontal_pole
-#> ... with 92 more rows
+#> ... with 91 more rows
 ```

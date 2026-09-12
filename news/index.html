@@ -9,7 +9,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">ggsegMiccai</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,10 +41,17 @@
     </div>
 
     <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.0.0.9000" id="ggsegmiccai-1009000">ggsegMiccai 1.0.0.9000<a class="anchor" aria-label="anchor" href="#ggsegmiccai-1009000"></a></h2>
+<ul><li>The atlases are rebuilt with ggseg.extra 1.9.9.9023, which fixes two defects visible in the data. The cortical atlas no longer has unlabelled holes: 1026 left and 1075 right vertices had no region, and the medial wall is now grey context instead of parcels bleeding across it. The subcortical atlas is no longer upside down in its 2D views, where the cerebellum sat above the basal ganglia and the brain stem pointed up.</li>
+<li>
+<code>rh_Left_MCgG_middle_cingulate_gyrus</code> is gone: a left-hemisphere label that had bled onto the right surface, leaving 101 regions. No region names were lost.</li>
+</ul></div>
+    <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.0.0" id="ggsegmiccai-100">ggsegMiccai 1.0.0<a class="anchor" aria-label="anchor" href="#ggsegmiccai-100"></a></h2>
 <ul><li>Initial release with <code>miccai</code> atlases as a unified <code>ggseg_atlas</code> object for the ggseg 2.0 ecosystem.</li>
 </ul></div>
-  </main></div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside></div>
 
 
     <footer><div class="ggsegverse-footer py-3">
