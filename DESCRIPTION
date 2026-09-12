@@ -1,6 +1,6 @@
 Package: ggsegMiccai
 Title: MICCAI 2012 Multi-Atlas Labeling Brain Atlas for the 'ggseg' Ecosystem
-Version: 1.0.0
+Version: 1.0.0.9000
 Authors@R: c(
     person("Athanasia Mo", "Mowinckel", , "a.m.mowinckel@psykologi.uio.no", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5756-0223"))
