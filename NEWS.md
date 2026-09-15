@@ -11,6 +11,14 @@
   empty.
 - No regions were added or removed: the cortical atlas still has 101 regions
   and the subcortical atlas 24.
+- The subcortical atlas is now polished, having had no simplification or
+  smoothing at all: both the `cortex_` context and the 24 structures rendered
+  with the raw marching-squares voxel staircase. The context keeps half its
+  vertices and is rounded with `chaikin`, which moves vertices rather than
+  growing the shape and so leaves the sulci open; the structures simplify
+  harder and are rounded with the default close. Geometry drops from 8618 to
+  5951 polygon coordinates. No region, mesh or palette entry changes - this is
+  the 2D outline only, and the cortical atlas is untouched.
 - `data-raw/make_atlas.R` keeps `atlas_simplify(keep = 0.2)` and still does
   not smooth. Smoothing no longer inflates the vertex count the way it used
   to, but on this atlas it still takes the cortical geometry from 7849 to
