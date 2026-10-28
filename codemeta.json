@@ -136,11 +136,11 @@
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=ggseg.formats"
+      "sameAs": "https://github.com/ggsegverse/ggseg.formats"
     },
     "SystemRequirements": null
   },
-  "fileSize": "1223.461KB",
+  "fileSize": "1223.491KB",
   "releaseNotes": "https://github.com/ggsegverse/ggsegMiccai/blob/main/NEWS.md",
   "readme": "https://github.com/ggsegverse/ggsegMiccai/blob/main/README.md",
   "contIntegration": "https://github.com/ggsegverse/ggsegMiccai/actions/workflows/R-CMD-check.yaml",
