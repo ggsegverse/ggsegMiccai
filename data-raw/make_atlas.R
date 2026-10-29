@@ -65,12 +65,29 @@ vermis_regions <- c(
   atlas_simplify(keep = 0.2) |>
   atlas_region_rename("^\\S+ ", "")
 
+# The subcortical atlas is two kinds of geometry in one object, and they want
+# opposite treatment, so they are polished separately rather than in one pass.
+#
+# The `cortex_` silhouette is anatomical context: what makes it readable as a
+# brain is its sulcal and gyral shape, which is fine-scale detail. It keeps half
+# its vertices and is rounded with `chaikin`, which moves vertices rather than
+# growing the shape, so the marching-squares staircase goes without the sulci
+# going with it - `atlas_smooth()`'s default `close` fills anything narrower
+# than the smoothing distance, and a sulcus is exactly that.
+#
+# The structures are small, compact and carry no fine detail worth keeping, so
+# they simplify harder and are smoothed with `close`, which is what rounds a
+# marching-squares parcel into a recognisable nucleus.
 .miccai_subcortical <- atlases$subcortical |>
   atlas_region_rename(
     "^cerebellar vermal lobules",
     function(region) unname(vermis_regions[region])
   ) |>
-  atlas_region_rename("^ventral dc$", "ventral DC")
+  atlas_region_rename("^ventral dc$", "ventral DC") |>
+  atlas_simplify(keep = 0.5, labels = "^cortex") |>
+  atlas_smooth(smoothness = 0.35, labels = "^cortex", method = "chaikin") |>
+  atlas_simplify(keep = 0.3, exclude = "^cortex") |>
+  atlas_smooth(smoothness = 0.4, exclude = "^cortex")
 
 usethis::use_data(
   .miccai_cortical,
